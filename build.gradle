@@ -24,7 +24,6 @@ loom {
 	mods {
 		"divergent-progression" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 
