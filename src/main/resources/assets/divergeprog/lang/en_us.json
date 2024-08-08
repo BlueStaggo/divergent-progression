@@ -1,0 +1,26 @@
+{
+  "block.divergeprog.flint_pebbles": "Flint Pebbles",
+
+  "item.divergeprog.tooltip.broken": "Broken!",
+
+  "item.divergeprog.flint_bar": "Flint Bar",
+  "item.divergeprog.copper_bar": "Copper Bar",
+  "item.divergeprog.iron_bar": "Iron Bar",
+  "item.divergeprog.gold_bar": "Gold Bar",
+  "item.divergeprog.diamond_bar": "Diamond Bar",
+  "item.divergeprog.raw_copper_bar": "Raw Copper Bar",
+  "item.divergeprog.raw_iron_bar": "Raw Iron Bar",
+  "item.divergeprog.raw_gold_bar": "Raw Gold Bar",
+
+  "item.divergeprog.flint_sword": "Flint Sword",
+  "item.divergeprog.flint_axe": "Flint Axe",
+  "item.divergeprog.flint_pickaxe": "Flint Pickaxe",
+  "item.divergeprog.flint_shovel": "Flint Shovel",
+  "item.divergeprog.flint_hoe": "Flint Hoe",
+
+  "item.divergeprog.copper_sword": "Copper Sword",
+  "item.divergeprog.copper_axe": "Copper Axe",
+  "item.divergeprog.copper_pickaxe": "Copper Pickaxe",
+  "item.divergeprog.copper_shovel": "Copper Shovel",
+  "item.divergeprog.copper_hoe": "Copper Hoe"
+}

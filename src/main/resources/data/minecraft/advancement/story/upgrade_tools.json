@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:story/mine_stone",
+  "criteria": {
+    "copper_pickaxe": {
+      "conditions": {
+        "items": [
+          {
+            "items": "divergeprog:copper_pickaxe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.story.upgrade_tools.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "divergeprog:copper_pickaxe"
+    },
+    "title": {
+      "translate": "advancements.story.upgrade_tools.title"
+    }
+  },
+  "requirements": [
+    [
+      "copper_pickaxe"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 2.1,
+  "group": "copper_bar",
+  "ingredient": {
+    "item": "divergeprog:raw_copper_bar"
+  },
+  "result": {
+    "id": "divergeprog:copper_bar"
+  }
+}

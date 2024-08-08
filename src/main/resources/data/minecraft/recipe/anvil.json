@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "divergeprog:iron_bar"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "III",
+    " I ",
+    "iii"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:anvil"
+  }
+}

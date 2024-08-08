@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 2.1,
+  "group": "iron_bar",
+  "ingredient": {
+    "item": "divergeprog:raw_iron_bar"
+  },
+  "result": {
+    "id": "divergeprog:iron_bar"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_flint_bar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "divergeprog:flint_bar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "divergeprog:flint_pickaxe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_flint_bar"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "divergeprog:flint_pickaxe"
+    ]
+  }
+}

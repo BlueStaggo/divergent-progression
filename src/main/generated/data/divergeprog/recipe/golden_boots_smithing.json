@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "divergeprog:gold_bar"
+  },
+  "base": {
+    "item": "minecraft:chainmail_boots"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:golden_boots"
+  },
+  "template": []
+}

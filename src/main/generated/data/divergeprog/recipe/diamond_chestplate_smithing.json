@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "divergeprog:diamond_bar"
+  },
+  "base": {
+    "item": "minecraft:chainmail_chestplate"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:diamond_chestplate"
+  },
+  "template": []
+}

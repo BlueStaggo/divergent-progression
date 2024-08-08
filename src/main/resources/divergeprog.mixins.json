@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "io.bluestaggo.divergeprog.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AnvilScreenHandlerMixin",
+    "ItemStackMixin",
+    "PlayerEntityMixin",
+    "ToolMaterialsMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "divergeprog:diamond_bar"
+  },
+  "base": {
+    "item": "minecraft:chainmail_helmet"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:diamond_helmet"
+  },
+  "template": []
+}

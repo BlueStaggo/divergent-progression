@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "divergeprog:block/flint_pebbles"
+      },
+      {
+        "model": "divergeprog:block/flint_pebbles",
+        "uvlock": true,
+        "y": 90
+      },
+      {
+        "model": "divergeprog:block/flint_pebbles",
+        "uvlock":  true,
+        "y": 180
+      },
+      {
+        "model": "divergeprog:block/flint_pebbles",
+        "uvlock":  true,
+        "y": 270
+      }
+    ]
+  }
+}

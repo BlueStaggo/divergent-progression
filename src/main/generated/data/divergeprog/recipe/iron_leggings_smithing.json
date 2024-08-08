@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "divergeprog:iron_bar"
+  },
+  "base": {
+    "item": "minecraft:chainmail_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:iron_leggings"
+  },
+  "template": []
+}
