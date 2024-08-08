@@ -1,5 +1,7 @@
 <center>
-    <img src="banner.png" alt="Divergent Progression banner"/>
+    <p align="center">
+        <img src="banner.png" alt="Divergent Progression banner"/>
+    </p>
 </center>
 
 Divergent Progression is a mod that alters the way Minecraft's progression works inspired by [Minecraft Diverge](https://github.com/BlueStaggo/MCDiverge) and [Slow Your Roll](https://modrinth.com/mod/slow-your-roll/). Wooden and stone tools are no longer craftable and flint and copper tools take their places instead. Tool and armor recipes have been altered to be significantly more expensive and the durability system has been given some tweaks.
