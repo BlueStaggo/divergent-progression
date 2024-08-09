@@ -8,12 +8,11 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @SuppressWarnings("UnresolvedMixinReference")
 @Pseudo
-@Mixin(targets = "org.betterx.betternether.items.materials.BNToolMaterial")
+@Mixin(targets = "org.betterx.betternether.items.materials.BNToolMaterial", remap = false)
 public abstract class BNToolMaterialMixin implements ToolMaterial {
     @ModifyConstant(
             method = "<clinit>",
-            constant = @Constant(intValue = 512),
-            remap = false
+            constant = @Constant(intValue = 512)
     )
     private static int modifyCincinnasiteDurability(int constant) {
         return 1024;
@@ -21,8 +20,7 @@ public abstract class BNToolMaterialMixin implements ToolMaterial {
 
     @ModifyConstant(
             method = "<clinit>",
-            constant = @Constant(intValue = 2061),
-            remap = false
+            constant = @Constant(intValue = 2061)
     )
     private static int modifyCincinnasiteDiamondDurability(int constant) {
         return 2048;
@@ -30,8 +28,7 @@ public abstract class BNToolMaterialMixin implements ToolMaterial {
 
     @ModifyConstant(
             method = "<clinit>",
-            constant = @Constant(intValue = 2561),
-            remap = false
+            constant = @Constant(intValue = 2561)
     )
     private static int modifyNetherRubyDurability(int constant) {
         return 2560;
@@ -39,8 +36,7 @@ public abstract class BNToolMaterialMixin implements ToolMaterial {
 
     @ModifyConstant(
             method = "<clinit>",
-            constant = @Constant(intValue = 2861),
-            remap = false
+            constant = @Constant(intValue = 2861)
     )
     private static int modifyFlamingRubyDurability(int constant) {
         return 2880;

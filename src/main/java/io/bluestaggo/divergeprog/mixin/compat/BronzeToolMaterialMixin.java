@@ -5,7 +5,7 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
 
 @Pseudo
-@Mixin(targets = "com.seacroak.bronze.material.BronzeToolMaterial")
+@Mixin(targets = "com.seacroak.bronze.material.BronzeToolMaterial", remap = false)
 public abstract class BronzeToolMaterialMixin implements ToolMaterial {
     @Override
     public int getDurability() {
