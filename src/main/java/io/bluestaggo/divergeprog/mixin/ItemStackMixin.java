@@ -2,13 +2,10 @@ package io.bluestaggo.divergeprog.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import io.bluestaggo.divergeprog.DivergentProgression;
-import io.bluestaggo.divergeprog.item.ComponentHolderState;
 import net.fabricmc.fabric.api.item.v1.FabricItemStack;
 import net.minecraft.block.BlockState;
 import net.minecraft.component.ComponentHolder;
 import net.minecraft.component.ComponentMap;
-import net.minecraft.component.ComponentType;
-import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.EntityAttribute;
@@ -210,29 +207,5 @@ public abstract class ItemStackMixin implements ComponentHolder, FabricItemStack
         if (isBroken()) {
             ci.cancel();
         }
-    }
-
-    @Override
-    public <T> T get(ComponentType<? extends T> type) {
-        if ((ComponentHolderState.getBlockedBrokenComponents().contains(type) || type == DataComponentTypes.ENCHANTMENTS) && isBroken()) {
-            return null;
-        }
-        return this.getComponents().get(type);
-    }
-
-    @Override
-    public <T> T getOrDefault(ComponentType<? extends T> type, T fallback) {
-        if ((ComponentHolderState.getBlockedBrokenComponents().contains(type) || type == DataComponentTypes.ENCHANTMENTS) && isBroken()) {
-            return fallback;
-        }
-        return this.getComponents().getOrDefault(type, fallback);
-    }
-
-    @Override
-    public boolean contains(ComponentType<?> type) {
-        if (ComponentHolderState.getBlockedBrokenComponents().contains(type) && isBroken()) {
-            return false;
-        }
-        return this.getComponents().contains(type);
     }
 }
