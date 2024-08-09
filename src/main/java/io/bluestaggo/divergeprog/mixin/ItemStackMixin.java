@@ -2,6 +2,7 @@ package io.bluestaggo.divergeprog.mixin;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import io.bluestaggo.divergeprog.DivergentProgression;
+import io.bluestaggo.divergeprog.item.ComponentHolderState;
 import net.fabricmc.fabric.api.item.v1.FabricItemStack;
 import net.minecraft.block.BlockState;
 import net.minecraft.component.ComponentHolder;
@@ -32,17 +33,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.List;
-import java.util.Set;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 
 @Mixin(ItemStack.class)
 public abstract class ItemStackMixin implements ComponentHolder, FabricItemStack {
-    @Unique private static final Set<ComponentType<?>> BLOCKED_BROKEN_COMPONENTS = Set.of(
-            DataComponentTypes.ATTRIBUTE_MODIFIERS,
-            DataComponentTypes.FOOD,
-            DataComponentTypes.TOOL
-    );
     @Unique private static final Text BROKEN_TEXT = Text.translatable(Util.createTranslationKey(
             "item", DivergentProgression.id("tooltip.broken"))).formatted(Formatting.RED);
 
@@ -219,7 +214,7 @@ public abstract class ItemStackMixin implements ComponentHolder, FabricItemStack
 
     @Override
     public <T> T get(ComponentType<? extends T> type) {
-        if ((BLOCKED_BROKEN_COMPONENTS.contains(type) || type == DataComponentTypes.ENCHANTMENTS) && isBroken()) {
+        if ((ComponentHolderState.getBlockedBrokenComponents().contains(type) || type == DataComponentTypes.ENCHANTMENTS) && isBroken()) {
             return null;
         }
         return this.getComponents().get(type);
@@ -227,7 +222,7 @@ public abstract class ItemStackMixin implements ComponentHolder, FabricItemStack
 
     @Override
     public <T> T getOrDefault(ComponentType<? extends T> type, T fallback) {
-        if ((BLOCKED_BROKEN_COMPONENTS.contains(type) || type == DataComponentTypes.ENCHANTMENTS) && isBroken()) {
+        if ((ComponentHolderState.getBlockedBrokenComponents().contains(type) || type == DataComponentTypes.ENCHANTMENTS) && isBroken()) {
             return fallback;
         }
         return this.getComponents().getOrDefault(type, fallback);
@@ -235,7 +230,7 @@ public abstract class ItemStackMixin implements ComponentHolder, FabricItemStack
 
     @Override
     public boolean contains(ComponentType<?> type) {
-        if (BLOCKED_BROKEN_COMPONENTS.contains(type) && isBroken()) {
+        if (ComponentHolderState.getBlockedBrokenComponents().contains(type) && isBroken()) {
             return false;
         }
         return this.getComponents().contains(type);

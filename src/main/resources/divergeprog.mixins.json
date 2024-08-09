@@ -4,6 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AnvilScreenHandlerMixin",
+    "ComponentHolderMixin",
     "ItemStackMixin",
     "PlayerEntityMixin",
     "ToolMaterialsMixin"
