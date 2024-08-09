@@ -12,7 +12,8 @@ import org.spongepowered.asm.mixin.injection.ModifyConstant;
 public abstract class BNToolMaterialMixin implements ToolMaterial {
     @ModifyConstant(
             method = "<clinit>",
-            constant = @Constant(intValue = 512)
+            constant = @Constant(intValue = 512),
+            remap = false
     )
     private static int modifyCincinnasiteDurability(int constant) {
         return 1024;
@@ -20,7 +21,8 @@ public abstract class BNToolMaterialMixin implements ToolMaterial {
 
     @ModifyConstant(
             method = "<clinit>",
-            constant = @Constant(intValue = 2061)
+            constant = @Constant(intValue = 2061),
+            remap = false
     )
     private static int modifyCincinnasiteDiamondDurability(int constant) {
         return 2048;
@@ -28,7 +30,8 @@ public abstract class BNToolMaterialMixin implements ToolMaterial {
 
     @ModifyConstant(
             method = "<clinit>",
-            constant = @Constant(intValue = 2561)
+            constant = @Constant(intValue = 2561),
+            remap = false
     )
     private static int modifyNetherRubyDurability(int constant) {
         return 2560;
@@ -36,7 +39,8 @@ public abstract class BNToolMaterialMixin implements ToolMaterial {
 
     @ModifyConstant(
             method = "<clinit>",
-            constant = @Constant(intValue = 2861)
+            constant = @Constant(intValue = 2861),
+            remap = false
     )
     private static int modifyFlamingRubyDurability(int constant) {
         return 2880;
