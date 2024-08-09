@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 1.5,
+  "group": "cincinnasite_bar",
+  "ingredient": {
+    "item": "divergeprog:betternether/raw_cincinnasite_bar"
+  },
+  "result": {
+    "id": "divergeprog:betternether/cincinnasite_bar"
+  },
+  "fabric:load_conditions": {
+    "condition": "fabric:all_mods_loaded",
+    "values": [
+      "betternether"
+    ]
+  }
+}

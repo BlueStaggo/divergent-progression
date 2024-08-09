@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "divergeprog:bronze/bronze_bar"
+  },
+  "base": {
+    "item": "minecraft:chainmail_leggings"
+  },
+  "result": {
+    "count": 1,
+    "id": "bronze:bronze_leggings"
+  },
+  "template": [],
+  "fabric:load_conditions": {
+    "condition": "fabric:all_mods_loaded",
+    "values": [
+      "bronze"
+    ]
+  }
+}

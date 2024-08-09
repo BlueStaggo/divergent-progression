@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "cincinnasite_sword",
+  "key": {
+    "#": {
+      "item": "divergeprog:betternether/cincinnasite_bar"
+    },
+    "I": {
+      "item": "betternether:nether_reed_stem"
+    }
+  },
+  "pattern": [
+    "#",
+    "#",
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "betternether:cincinnasite_sword"
+  },
+  "fabric:load_conditions": {
+    "condition": "fabric:all_mods_loaded",
+    "values": [
+      "betternether"
+    ]
+  }
+}

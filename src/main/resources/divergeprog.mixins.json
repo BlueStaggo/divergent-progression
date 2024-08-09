@@ -7,7 +7,9 @@
     "ComponentHolderMixin",
     "ItemStackMixin",
     "PlayerEntityMixin",
-    "ToolMaterialsMixin"
+    "ToolMaterialsMixin",
+    "compat.BNToolMaterialMixin",
+    "compat.BronzeToolMaterialMixin"
   ],
   "injectors": {
     "defaultRequire": 1

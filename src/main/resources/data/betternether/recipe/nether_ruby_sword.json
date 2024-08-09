@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "nether_ruby_sword",
+  "key": {
+    "#": {
+      "item": "divergeprog:betternether/nether_ruby_bar"
+    },
+    "I": {
+      "item": "betternether:nether_reed_stem"
+    }
+  },
+  "pattern": [
+    "#",
+    "#",
+    "I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "betternether:nether_ruby_sword"
+  },
+  "fabric:load_conditions": {
+    "condition": "fabric:all_mods_loaded",
+    "values": [
+      "betternether"
+    ]
+  }
+}

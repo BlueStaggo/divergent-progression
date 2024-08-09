@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 8.4,
+  "group": "bronze_bar",
+  "ingredient": {
+    "item": "divergeprog:bronze/bronze_blend_bar"
+  },
+  "result": {
+    "id": "divergeprog:bronze/bronze_bar"
+  },
+  "fabric:load_conditions": {
+    "condition": "fabric:all_mods_loaded",
+    "values": [
+      "bronze"
+    ]
+  }
+}

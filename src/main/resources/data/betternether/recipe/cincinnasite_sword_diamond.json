@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "divergeprog:diamond_bar"
+  },
+  "base": {
+    "item": "betternether:cincinnasite_sword"
+  },
+  "result": {
+    "count": 1,
+    "id": "betternether:cincinnasite_sword_diamond"
+  },
+  "template": {
+    "item": "betternether:cincinnasite_diamond_upgrade_smithing_template"
+  },
+  "fabric:load_conditions": {
+    "condition": "fabric:all_mods_loaded",
+    "values": [
+      "betternether"
+    ]
+  }
+}

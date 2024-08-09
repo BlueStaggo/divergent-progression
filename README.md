@@ -16,3 +16,4 @@ Divergent Progression is a mod that alters the way Minecraft's progression works
 - Unit repairs at anvils are free and anvils break slightly less often
 - Durability for vanilla tool materials have been buffed
 - Smelting iron and gold tools results in ingots instead of nuggets
+- Compatibility with [BetterNether](https://modrinth.com/mod/betternether) and [Bronze](https://modrinth.com/mod/bronze)

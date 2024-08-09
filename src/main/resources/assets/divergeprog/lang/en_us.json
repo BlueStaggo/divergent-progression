@@ -1,6 +1,8 @@
 {
   "block.divergeprog.flint_pebbles": "Flint Pebbles",
 
+  "tag.item.divergeprog.incorrect_for_flint_tool": "Incorrect for Flint Tool",
+
   "item.divergeprog.tooltip.broken": "Broken!",
 
   "item.divergeprog.flint_bar": "Flint Bar",
@@ -22,5 +24,12 @@
   "item.divergeprog.copper_axe": "Copper Axe",
   "item.divergeprog.copper_pickaxe": "Copper Pickaxe",
   "item.divergeprog.copper_shovel": "Copper Shovel",
-  "item.divergeprog.copper_hoe": "Copper Hoe"
+  "item.divergeprog.copper_hoe": "Copper Hoe",
+
+  "item.divergeprog.bronze.bronze_bar": "Bronze Bar",
+  "item.divergeprog.bronze.bronze_blend_bar": "Bronze Blend Bar",
+
+  "item.divergeprog.betternether.cincinnasite_bar": "Cincinnasite Bar",
+  "item.divergeprog.betternether.raw_cincinnasite_bar": "Raw Cincinnasite Bar",
+  "item.divergeprog.betternether.nether_ruby_bar": "Nether Ruby Bar"
 }

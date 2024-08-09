@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "cincinnasite_hoe",
+  "key": {
+    "#": {
+      "item": "divergeprog:betternether/cincinnasite_bar"
+    },
+    "I": {
+      "item": "betternether:nether_reed_stem"
+    }
+  },
+  "pattern": [
+    "##",
+    " I",
+    " I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "betternether:cincinnasite_hoe"
+  },
+  "fabric:load_conditions": {
+    "condition": "fabric:all_mods_loaded",
+    "values": [
+      "betternether"
+    ]
+  }
+}

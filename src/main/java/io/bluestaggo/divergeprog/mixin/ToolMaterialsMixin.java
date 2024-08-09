@@ -45,7 +45,7 @@ public abstract class ToolMaterialsMixin implements ToolMaterial {
             constant = @Constant(intValue = 1561)
     )
     private static int modifyDiamondDurability(int constant) {
-        return 1560;
+        return 1600;
     }
 
     @ModifyConstant(
@@ -53,6 +53,6 @@ public abstract class ToolMaterialsMixin implements ToolMaterial {
             constant = @Constant(intValue = 2031)
     )
     private static int modifyNetheriteDurability(int constant) {
-        return 2032;
+        return 2048;
     }
 }
