@@ -1,10 +1,14 @@
 package io.bluestaggo.divergeprog.mixin;
 
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ToolMaterials;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(ToolMaterials.class)
 public abstract class ToolMaterialsMixin implements ToolMaterial {
@@ -54,5 +58,16 @@ public abstract class ToolMaterialsMixin implements ToolMaterial {
     )
     private static int modifyNetheriteDurability(int constant) {
         return 2048;
+    }
+
+    @Redirect(
+            method = "method_24361",
+            at = @At(
+                    value = "FIELD",
+                    target = "Lnet/minecraft/item/Items;NETHERITE_INGOT:Lnet/minecraft/item/Item;"
+            )
+    )
+    private static Item modifyNetheriteRepairMaterial() {
+        return Items.NETHERITE_SCRAP;
     }
 }

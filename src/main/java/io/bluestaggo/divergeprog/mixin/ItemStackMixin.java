@@ -208,4 +208,15 @@ public abstract class ItemStackMixin implements ComponentHolder, FabricItemStack
             ci.cancel();
         }
     }
+
+    @Inject(
+            method = "isEnchantable",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    private void isEnchantableIfNotBroken(CallbackInfoReturnable<Boolean> cir) {
+        if (isBroken()) {
+            cir.setReturnValue(false);
+        }
+    }
 }

@@ -1,10 +1,13 @@
 package io.bluestaggo.divergeprog.mixin;
 
 import net.minecraft.component.ComponentHolder;
+import net.minecraft.component.ComponentMap;
 import net.minecraft.component.ComponentType;
 import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ItemEnchantmentsComponent;
 import net.minecraft.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -13,7 +16,9 @@ import static io.bluestaggo.divergeprog.item.ComponentHolderState.*;
 
 @Mixin(ComponentHolder.class)
 public interface ComponentHolderMixin {
-    @SuppressWarnings("ConstantValue")
+    @Shadow ComponentMap getComponents();
+
+    @SuppressWarnings({"ConstantValue", "unchecked"})
     @Inject(
             method = "get",
             at = @At("HEAD"),
@@ -22,9 +27,14 @@ public interface ComponentHolderMixin {
     default <T> void getForItemStack(ComponentType<? extends T> type, CallbackInfoReturnable<T> cir) {
         if (!((Object) this instanceof ItemStack itemStack)) return;
 
-        if ((getBlockedBrokenComponents().contains(type)
-                || type == DataComponentTypes.ENCHANTMENTS)
+        boolean isEnchantments = type == DataComponentTypes.ENCHANTMENTS;
+        if ((getBlockedBrokenComponents().contains(type) || isEnchantments)
                 && isItemStackBroken(itemStack)) {
+            if (isEnchantments && getComponents().contains(DataComponentTypes.ENCHANTMENTS)) {
+                cir.setReturnValue((T) ItemEnchantmentsComponent.DEFAULT);
+                return;
+            }
+
             cir.setReturnValue(null);
         }
     }
